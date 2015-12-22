@@ -1,3 +1,12 @@
+###Modifications
+
+This is a copy of jjallaire's sigma htmlwidget with a modification to fix an issue with edge opacity on certain browsers.  The fix involved changing the sigma javascript base to force the graph to render on "canvas" instead of "webgl".  This seemed to solve the problem.  
+
+Feel free to install this version with:
+
+```r
+devtools::install_github('iankloo/sigma')
+```
 
 
 ### sigma
