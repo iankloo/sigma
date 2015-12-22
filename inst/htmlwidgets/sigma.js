@@ -7,8 +7,15 @@ HTMLWidgets.widget({
   initialize: function(el, width, height) {
    
     // create our sigma object and bind it to the element
-    var sig = new sigma(el.id);
-    
+    // force to use canvas - webgl not rendering opacity
+    // properly consistently
+    var sig = new sigma({
+      renderers: [{
+        container: document.getElementById(el.id),
+        type: 'canvas'
+      }]
+    });
+  
     // return it as part of our instance data
     return {
       sig: sig
