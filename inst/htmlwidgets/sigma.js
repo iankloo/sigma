@@ -9,12 +9,14 @@ HTMLWidgets.widget({
     // create our sigma object and bind it to the element
     // force to use canvas - webgl not rendering opacity
     // properly consistently
-    var sig = new sigma({
-      renderers: [{
-        container: document.getElementById(el.id),
-        type: 'canvas'
-      }]
-    });
+    //var sig = new sigma({
+    //  renderers: [{
+    //    container: document.getElementById(el.id),
+    //    type: 'canvas'
+    //  }]
+    //});
+    
+    var sig = new sigma(el.id);
   
     // return it as part of our instance data
     return {
